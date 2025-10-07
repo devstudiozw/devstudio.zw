@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Professional web development services">
@@ -29,9 +30,6 @@
     <link href="css/responsive.css" rel="stylesheet">
     
     <!-- Colors CSS -->
-    <link rel="stylesheet" type="text/css" href="css/color/green.css">
-    
-    <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="css/color/green.css" title="green">
     <link rel="stylesheet" type="text/css" href="css/color/light-red.css" title="light-red">
     <link rel="stylesheet" type="text/css" href="css/color/blue.css" title="blue">
@@ -49,24 +47,125 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style> /* Modern Header Styles */
+        .modern-header {
+           position: relative;
+           height: 100vh;
+           background: url('images/gogg.png');
+           background-size: cover;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           overflow: hidden;
+       }
+       
+       .header-overlay {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(21, 161, 63, 0);
+           z-index: 1;
+       }
+       
+       .header-content {
+           position: relative;
+           z-index: 2;
+           color: #0f0f0f;
+           text-align: center;
+           padding: 0 20px;
+       }
+       
+       .typewriter-text {
+           font-weight: bold;
+           margin-bottom: 30px;
+           overflow: hidden;
+           white-space: nowrap;
+           border-right: 3px solid #959695;
+           animation: blink-caret 0.75s step-end infinite;
+       }
+       
+       #typewriter-main {
+           font-size: 3.5rem;
+           margin-bottom: 20px;
+           animation: typewriter-main 3s steps(25) 1s 1 normal both;
+       }
+       
+       #typewriter-subtitle {
+           font-size: 1.5rem;
+           margin-bottom: 40px;
+           animation: typewriter-subtitle 3s steps(40) 4s 1 normal both;
+       }
+       
+       .btn-get-started {
+           padding: 15px 40px;
+           font-size: 1.2rem;
+           border: none;
+           background: linear-gradient(45deg, #5ff55a, #00b30038);
+           color: rgb(12, 12, 12);
+           border-radius: 50px;
+           transition: all 0.3s ease;
+           position: relative;
+           overflow: hidden;
+           z-index: 1;
+       }
+       
+       .btn-get-started:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+       }
+       
+       .btn-get-started:after {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(45deg, #799402, #05856942);
+           z-index: -1;
+           transition: opacity 0.3s ease;
+           opacity: 0;
+       }
+       
+       .btn-get-started:hover:after {
+           opacity: 1;
+       }
+       
+       /* Typewriter Animations */
+       @keyframes typewriter-main {
+           from { width: 0; }
+           to { width: 100%; }
+       }
+       
+       @keyframes typewriter-subtitle {
+           from { width: 0; }
+           to { width: 100%; }
+       }
+       
+       @keyframes blink-caret {
+           from, to { border-color: transparent; }
+           50% { border-color: #fff; }
+       }
+       
+       /* Why Choose Us Section */
+       .why-choose-section {
+           padding: 80px 0;
+           background-color: #f8f9fa;
+       }
+       
+       .why-choose-section .section-title h2 {
+           font-size: 2.5rem;
+           font-weight: 700;
+           color: #333;
+           margin-bottom: 20px;
+       }
+       </style>
+
 </head>
-
 <body class="index">
-    
-    <!-- Styleswitcher -->
-    <div class="colors-switcher">
-        <a id="show-panel" class="hide-panel"><i class="fa fa-tint"></i></a>        
-            <ul class="colors-list">
-                <li><a title="Light Red" onClick="setActiveStyleSheet('light-red'); return false;" class="light-red"></a></li>
-                <li><a title="Blue" class="blue" onClick="setActiveStyleSheet('blue'); return false;"></a></li>
-                <li class="no-margin"><a title="Light Blue" onClick="setActiveStyleSheet('light-blue'); return false;" class="light-blue"></a></li>
-                <li><a title="Green" class="green" onClick="setActiveStyleSheet('green'); return false;"></a></li>
-                <li class="no-margin"><a title="light-green" class="light-green" onClick="setActiveStyleSheet('light-green'); return false;"></a></li>
-                <li><a title="Yellow" class="yellow" onClick="setActiveStyleSheet('yellow'); return false;"></a></li>
-            </ul>
-    </div>  
-    <!-- Styleswitcher End -->
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -77,7 +176,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Devstudio</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><B><strong>Devstudio</strong></B></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -86,7 +185,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#feature">Feature</a>
+                        <a class="page-scroll" href="#feature">Features</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -98,9 +197,6 @@
                         <a class="page-scroll" href="#service">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#pricing">Pricing</a>
                     </li>
                     <li>
@@ -110,78 +206,45 @@
                         <a class="page-scroll" href="#testimonial">Testimonials</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#partner">Our Partners</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Start Home Page Slider -->
-    <section id="page-top">
-        <div id="main-slide" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slide" data-slide-to="1"></li>
-                <li data-target="#main-slide" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img class="img-responsive" src="images/header-bg-1.jpeg" alt="slider">
-                    <div class="slider-content">
-                        <div class="col-md-12 text-center">
-                            <h1 class="animated3">
-                                <span><strong>Devstudio</strong> Digital Solutions</span>
-                            </h1>
-                            <p class="animated2">Crafting exceptional digital experiences<br> with cutting-edge web technologies</p>	
-                            <a href="#feature" class="page-scroll btn btn-primary animated1">Explore More</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="item">
-                    <img class="img-responsive" src="images/header-back.jpg" alt="slider">
-                    <div class="slider-content">
-                        <div class="col-md-12 text-center">
-                            <h1 class="animated1">
-                    		  <span>Welcome to <strong>Devstudio</strong></span>
-                    	    </h1>
-                            <p class="animated2">Transform your digital presence with our<br> comprehensive web development solutions</p>
-                            <a href="#feature" class="page-scroll btn btn-primary animated3">Our Services</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="item">
-                    <img class="img-responsive" src="images//galaxy.jpeg" alt="slider">
-                    <div class="slider-content">
-                        <div class="col-md-12 text-center">
-                            <h1 class="animated2">
-                                <span>The path to <strong>Digital Success</strong></span>
-                            </h1>
-                            <p class="animated1">From concept to deployment, we deliver<br> high-performance web solutions</p>	
-                             <a class="animated3 slider btn btn-primary btn-min-block" href="#">Get Started</a><a class="animated3 slider btn btn-default btn-min-block" href="#">View Work</a>
+     <div>
+    <section id="header-content">
+        <div class="modern-header">
+            <div class="header-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="header-content">
+                            <h1 class="typewriter-text" id="typewriter-main">Welcome to DevStudio</h1>
+                            <p class="typewriter-text" id="typewriter-subtitle">Crafting digital experiences that drive business growth.</p>
+                            <a href="#feature"><button class="btn btn-primary btn-get-started">Get Started</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <a class="left carousel-control" href="#main-slide" data-slide="prev">
-                <span><i class="fa fa-angle-left"></i></span>
-            </a>
-            <a class="right carousel-control" href="#main-slide" data-slide="next">
-                <span><i class="fa fa-angle-right"></i></span>
-            </a>
         </div>
     </section>
+    </div>
     <!-- End Home Page Slider -->
 
+    <!-- Why Choose Us Section -->
+<section id="feature" class="why-choose-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Why Choose Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Start Feature Section -->
-    <section id="feature" class="feature-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -254,9 +317,9 @@
                     <ul id="portfolio-list">
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img1.jpg" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img1.jpg" class="img-responsive" alt="Corporate Website Design" />
                                 <div class="portfolio-caption">
-                                    <h4>Corporate Website</h4>
+                                    <h4>Crayon prix website</h4>
                                     <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
@@ -264,50 +327,45 @@
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img2.png" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img2.png" class="img-responsive" alt="Web Application Development" />
                                 <div class="portfolio-caption">
-                                    <h4>Web Application</h4>
-                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <h4>tipgee website</h4>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img3.jpg" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img3.jpg" class="img-responsive" alt="E-commerce Platform" />
                                 <div class="portfolio-caption">
-                                    <h4>E-commerce Platform</h4>
-                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <h4>better tech website</h4>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img4.png" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img4.jpg" class="img-responsive" alt="Branding Project" />
                                 <div class="portfolio-caption">
-                                    <h4>Branding Project</h4>
-                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <h4>Icon fashion website</h4>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img5.jpeg" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img5.jpg" class="img-responsive" alt="Mobile Web App" />
                                 <div class="portfolio-caption">
-                                    <h4>Mobile Web App</h4>
-                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <h4>Company webisite</h4>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/portfolio/img6.png" class="img-responsive" alt="" />
+                                <img src="images/portfolio/img6.jpg" class="img-responsive" alt="SAAS Platform" />
                                 <div class="portfolio-caption">
-                                    <h4>SAAS Platform</h4>
-                                    <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                    <h4>star website</h4>
                                     <a href="#" class="link-2"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
@@ -318,36 +376,6 @@
         </div>
     </section>
     <!-- End Portfolio Section -->
-    
-    <!-- Start Portfolio Modal Section -->
-    <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="section-title text-center">
-                        <h3>Project Details</h3>
-                        <p>Comprehensive case study of our development process</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/portfolio/img1.jpg" class="img-responsive" alt="..">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/portfolio/img1.jpg" class="img-responsive" alt="..">
-                    </div>
-                </div>
-            </div>                
-        </div>
-    </div>
-    <!-- End Portfolio Modal Section -->
     
     <!-- Start About Us Section -->
     <section id="about-us" class="about-us-section-1">
@@ -363,26 +391,26 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="welcome-section text-center">
-                        <img src="images/about-01.jpg" class="img-responsive" alt="..">
-                        <h4>Our Process</h4>
+                        <img src="images/about-01.jpg" class="img-responsive" alt="Our Approach">
+                        <h4>Our Approach</h4>
                         <div class="border"></div>
-                        <p>Agile development methodology ensuring transparency, flexibility and rapid delivery of high-quality solutions.</p>
+                        <p>We combine technical expertise with creative solutions to deliver exceptional digital experiences that drive results</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="welcome-section text-center">
-                        <img src="images/about-02.jpg" class="img-responsive" alt="..">
-                        <h4>Technology Stack</h4>
+                        <img src="images/about-02.jpg" class="img-responsive" alt="Our Mission">
+                        <h4>Our Mission</h4>
                         <div class="border"></div>
-                        <p>Modern technologies including React, Node.js, Laravel and cloud infrastructure for scalable, future-proof solutions.</p>
+                        <p>To empower businesses with cutting-edge web solutions that enhance their digital presence and accelerate growth</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="welcome-section text-center">
-                        <img src="images/about-03.jpg" class="img-responsive" alt="..">
-                        <h4>Client Approach</h4>
+                        <img src="images/about-03.jpg" class="img-responsive" alt="Our Values">
+                        <h4>Our Values</h4>
                         <div class="border"></div>
-                        <p>Partnership-focused collaboration to understand your business goals and deliver measurable results.</p>
+                        <p>Innovation, excellence, and client satisfaction are at the core of everything we create.</p>
                     </div>
                 </div>
             </div>
@@ -406,7 +434,7 @@
                             </div>  
                         </div>
                         <div class="skill">
-                            <p>Frontend Development</p>          
+                            <p>HTML & CSS</p>          
                             <div class="progress">         
                                 <div class="progress-bar" role="progressbar"  data-percentage="90">
                                     <span class="progress-bar-span" >90%</span>
@@ -415,7 +443,7 @@
                             </div>  
                         </div>
                         <div class="skill">
-                            <p>Backend Development</p>          
+                            <p>SEO</p>          
                             <div class="progress">         
                                 <div class="progress-bar" role="progressbar"  data-percentage="85">
                                     <span class="progress-bar-span" >85%</span>
@@ -452,13 +480,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="images/about-01.jpg" alt="">
+                                <img src="images/about-01.jpg" alt="Our Team">
                             </div>
                             <div class="item">
-                                <img src="images/about-02.jpg" alt="">
+                                <img src="images/about-02.jpg" alt="Our Workspace">
                             </div>
                             <div class="item">
-                                <img src="images/about-03.jpg" alt="">
+                                <img src="images/about-03.jpg" alt="Our Process">
                             </div>
                         </div>
                     </div>
@@ -498,12 +526,12 @@
                     <div class="feature-2">
                         <div class="media">
                             <div class="pull-left">
-                                <i class="fa fa-code"></i>
+                                <i class="fa fa-line-chart"></i>
                                 <div class="border"></div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Frontend Development</h4>
-                                <p>Interactive user interfaces built with React, Vue.js and modern JavaScript frameworks.</p>
+                                <h4 class="media-heading">SEO & Digital Marketing</h4>
+                                <p>Strategies to increase visibility and drive targeted traffic to your website through search engine optimization and digital marketing campaigns.</p>
                             </div>
                         </div>
                     </div>
@@ -512,26 +540,12 @@
                     <div class="feature-2">
                         <div class="media">
                             <div class="pull-left">
-                                <i class="fa fa-server"></i>
+                                <i class="fa fa-paint-brush"></i>
                                 <div class="border"></div>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Backend Development</h4>
-                                <p>Robust server-side solutions with Node.js, Laravel and scalable cloud architectures.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="feature-2">
-                        <div class="media">
-                            <div class="pull-left">
-                                <i class="fa fa-wordpress"></i>
-                                <div class="border"></div>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">CMS Development</h4>
-                                <p>Custom WordPress, Shopify and other CMS solutions tailored to your content needs.</p>
+                                <h4 class="media-heading">Brand Identity</h4>
+                                <p>Complete branding solutions including logos and business materials that establish a strong visual identity for your business.</p>
                             </div>
                         </div>
                     </div>
@@ -545,7 +559,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Mobile Optimization</h4>
-                                <p>Fully responsive designs that deliver exceptional experiences on all mobile devices.</p>
+                                <p>Fully responsive designs that deliver exceptional experiences on all mobile devices and screen sizes.</p>
                             </div>
                         </div>
                     </div>
@@ -559,7 +573,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Performance Optimization</h4>
-                                <p>Lightning-fast page loads and optimized code for superior user experience and SEO.</p>
+                                <p>Lightning-fast page loads and optimized code for superior user experience and SEO rankings.</p>
                             </div>
                         </div>
                     </div>
@@ -576,27 +590,27 @@
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="counter-item">
                         <i class="fa fa-code"></i>
-                        <div class="timer" id="item1" data-to="1250" data-speed="5000"></div>
+                        <div class="timer" id="item1" data-to="23" data-speed="5000"></div>
                         <h5>Projects Completed</h5>                               
                     </div>
                 </div>  
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="counter-item">
                         <i class="fa fa-users"></i>
-                        <div class="timer" id="item2" data-to="850" data-speed="5000"></div>
+                        <div class="timer" id="item2" data-to="24" data-speed="5000"></div>
                         <h5>Satisfied Clients</h5>                               
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="counter-item">
                         <i class="fa fa-coffee"></i>
-                        <div class="timer" id="item3" data-to="12750" data-speed="5000"></div>
+                        <div class="timer" id="item3" data-to="268" data-speed="5000"></div>
                         <h5>Cups of Coffee</h5>                               
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="counter-item">
-                        <i class="fa fa-clock-o"></i>
+                        <i class="fa fa-code"></i>
                         <div class="timer" id="item4" data-to="8760" data-speed="5000"></div>
                         <h5>Hours of Development</h5>                               
                     </div>
@@ -605,113 +619,6 @@
         </div>
     </section>
     <!-- End Fun Facts Section -->
-
-    <!-- Start Team Member Section -->
-    <section id="team" class="team-member-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                        <h3>Our Team</h3>
-                        <p>The talented professionals behind our success</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="team-section">
-                        <div class="our-team">
-                            <div class="team-member">
-                                <img src="images/team/manage-1.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Sarah Johnson</h4>
-                                    <p>Lead Developer</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="team-member">
-                                <img src="images/team/manage-2.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Michael Chen</h4>
-                                    <p>UI/UX Designer</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="team-member">
-                                <img src="images/team/manage-3.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>David Wilson</h4>
-                                    <p>DevOps Engineer</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>    
-
-                            <div class="team-member">
-                                <img src="images/team/manage-4.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Emily Rodriguez</h4>
-                                    <p>Project Manager</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-slack"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="team-member">
-                                <img src="images/team/manage-1.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Robert Kim</h4>
-                                    <p>Frontend Developer</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="team-member">
-                                <img src="images/team/manage-2.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>Jessica Lee</h4>
-                                    <p>QA Specialist</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-bug"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Member Section -->
 
     <!-- Start Pricing Table Section -->
     <div id="pricing" class="pricing-section">
@@ -732,7 +639,7 @@
                     <div class="col-md-12">
                         <div class="pricing-table">
                             <div class="plan-name">
-                                <h3>Basic</h3>
+                                <h3>Starter</h3>
                             </div>
                             <div class="plan-price">
                                 <div class="price-value">$25<span>.00</span></div>
@@ -740,90 +647,66 @@
                             </div>
                             <div class="plan-list">
                                 <ul>
-                                    <li>basic local SEO </li>
-                                    <li>Google My Business</li>
-                                    <li>Social Media Optimazation</li>
-                                    <li>Basic website</li>
+                                    <li>Basic local SEO</li>
+                                    <li>Google My Business Setup</li>
+                                    <li>Social Media Optimization</li>
+                                    <li>Google Website</li>
                                     <li>1 Month Support</li>
                                 </ul>
                             </div>
                             <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Get Started</a>
+                                <a href="#contact" class="btn-system btn-small">Get Started</a>
                             </div>
                         </div>
                     </div>
                     
+                    <div class="col-md-12">
+                        <div class="pricing-table">
+                            <div class="plan-name">
+                                <h3>Basic</h3>
+                            </div>
+                            <div class="plan-price">
+                                <div class="price-value">$150<span>.00</span></div>
+                                <div class="interval">per project</div>
+                            </div>
+                            <div class="plan-list">
+                                <ul>
+                                    <li>Everything in Starter +</li>
+                                    <li>Custom Web Design (5 pages)</li>
+                                    <li>Advanced SEO</li>
+                                    <li>Free 2 year hosting</li>
+                                    <li>2 Months Support</li>
+                                </ul>
+                            </div>
+                            <div class="plan-signup">
+                                <a href="#contact" class="btn-system btn-small">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         <div class="pricing-table">
                             <div class="plan-name">
                                 <h3>Business</h3>
                             </div>
                             <div class="plan-price">
-                                <div class="price-value">$100<span>.00</span></div>
+                                <div class="price-value">$300<span>.00</span></div>
                                 <div class="interval">per project</div>
                             </div>
                             <div class="plan-list">
                                 <ul>
-                                    <li>Everthing in Basic +</li>
-                                    <li>Custom Design</li>
-                                    <li>Advanced SEO</li>
-                                    <li>CMS Integration</li>
+                                    <li>Everything in Basic +</li>
+                                    <li>3 more web pages</li>
+                                    <li>Chat Bot Integration</li>
+                                    <li>Free 4 year hosting</li>
+                                    <li>2 professional emails</li>
                                     <li>3 Months Support</li>
                                 </ul>
                             </div>
                             <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Get Started</a>
+                                <a href="#contact" class="btn-system btn-small">Get Started</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="pricing-table">
-                            <div class="plan-name">
-                                <h3>Enterprise</h3>
-                            </div>
-                            <div class="plan-price">
-                                <div class="price-value">$4,999<span>.00</span></div>
-                                <div class="interval">per project</div>
-                            </div>
-                            <div class="plan-list">
-                                <ul>
-                                    <li>Unlimited Pages</li>
-                                    <li>Custom Web Application</li>
-                                    <li>E-commerce Solutions</li>
-                                    <li>API Integration</li>
-                                    <li>6 Months Support</li>
-                                </ul>
-                            </div>
-                            <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-12">
-                        <div class="pricing-table">
-                            <div class="plan-name">
-                                <h3>Maintenance</h3>
-                            </div>
-                            <div class="plan-price">
-                                <div class="price-value">$299<span>.00</span></div>
-                                <div class="interval">per month</div>
-                            </div>
-                            <div class="plan-list">
-                                <ul>
-                                    <li>Security Updates</li>
-                                    <li>Performance Tuning</li>
-                                    <li>Content Updates</li>
-                                    <li>Bug Fixes</li>
-                                    <li>Priority Support</li>
-                                </ul>
-                            </div>
-                            <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                
                     <div class="col-md-12">
                         <div class="pricing-table">
                             <div class="plan-name">
@@ -843,7 +726,7 @@
                                 </ul>
                             </div>
                             <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Get Started</a>
+                                <a href="#contact" class="btn-system btn-small">Get Started</a>
                             </div>
                         </div>
                     </div>
@@ -867,7 +750,7 @@
                                 </ul>
                             </div>
                             <div class="plan-signup">
-                                <a href="#" class="btn-system btn-small">Contact Us</a>
+                                <a href="#contact" class="btn-system btn-small">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -892,7 +775,7 @@
                 <div class="latest-news">
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-01.jpg" class="img-responsive" alt="">
+                            <img src="images/about-01.jpg" class="img-responsive" alt="Web Development Trends">
                             <h4><a href="#">Web Development Trends for 2023</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>15</strong> <br>Jan, 2023</span>
@@ -903,7 +786,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-02.jpg" class="img-responsive" alt="">
+                            <img src="images/about-02.jpg" class="img-responsive" alt="Website Performance">
                             <h4><a href="#">Optimizing Website Performance</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>22</strong> <br>Feb, 2023</span>
@@ -914,7 +797,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-03.jpg" class="img-responsive" alt="">
+                            <img src="images/about-03.jpg" class="img-responsive" alt="E-commerce Case Study">
                             <h4><a href="#">Case Study: E-commerce Redesign</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>08</strong> <br>Mar, 2023</span>
@@ -925,7 +808,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-01.jpg" class="img-responsive" alt="">
+                            <img src="images/about-01.jpg" class="img-responsive" alt="CMS Selection">
                             <h4><a href="#">Choosing the Right CMS</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>14</strong> <br>Apr, 2023</span>
@@ -936,7 +819,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-02.jpg" class="img-responsive" alt="">
+                            <img src="images/about-02.jpg" class="img-responsive" alt="Web Accessibility">
                             <h4><a href="#">Accessibility in Web Design</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>05</strong> <br>May, 2023</span>
@@ -947,7 +830,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="latest-post">
-                            <img src="images/about-03.jpg" class="img-responsive" alt="">
+                            <img src="images/about-03.jpg" class="img-responsive" alt="JavaScript Future">
                             <h4><a href="#">The Future of JavaScript</a></h4>
                             <div class="post-details">
                                 <span class="date"><strong>19</strong> <br>Jun, 2023</span>
@@ -968,7 +851,7 @@
             <div id="testimonial-carousel" class="testimonials-carousel">
                 <div class="testimonials item">
                     <div class="testimonial-content">
-                        <img src="images/testimonial/face_1.png" alt="" >
+                        <img src="images/portfolio/img1.jpg" alt="Jennifer Thompson" >
                         <div class="testimonial-author">
                             <div class="author">Jennifer Thompson</div>
                             <div class="designation">CEO, TechSolutions Inc.</div>
@@ -978,7 +861,7 @@
                 </div>
                 <div class="testimonials item">
                     <div class="testimonial-content">
-                        <img src="images/testimonial/face_2.png" alt="" >
+                        <img src="images/portfolio/img2.png" alt="Mark Williams" >
                         <div class="testimonial-author">
                             <div class="author">Mark Williams</div>
                             <div class="designation">Director, Digital Marketing</div>
@@ -988,7 +871,7 @@
                 </div>
                 <div class="testimonials item">
                     <div class="testimonial-content">
-                        <img src="images/testimonial/face_3.png" alt="" >
+                        <img src="images/portfolio/img3.jpg" alt="Lisa Rodriguez" >
                         <div class="testimonial-author">
                             <div class="author">Lisa Rodriguez</div>
                             <div class="designation">Founder, Startup Ventures</div>
@@ -1152,6 +1035,13 @@
         </div>
     </div>
 
+    <!-- Whatsapp icon 
+    ================================================== -->
+    <a href="https://api.whatsapp.com/send?phone=26378681133&text=Hello!%20I%20would%20like%20to%20book%20a%20service." 
+     class="whatsapp-float" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
     <!-- jQuery Version 2.1.1 -->
     <script src="js/jquery-2.1.1.min.js"></script>
 
@@ -1167,6 +1057,19 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="js/styleswitcher.js"></script>
+    <script>
+        // Typewriter Effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove the border-right after animation completes
+            setTimeout(function() {
+                document.getElementById('typewriter-main').style.borderRight = 'none';
+            }, 6000);
+            
+            setTimeout(function() {
+                document.getElementById('typewriter-subtitle').style.borderRight = 'none';
+            }, 9000);
+        });
+        </script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
