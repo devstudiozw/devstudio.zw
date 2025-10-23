@@ -4,31 +4,231 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Contact Us - Devstudio</title>
+		<title>Contact Us - Devstudio | Get in Touch for Web Design & Development</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Contact Devstudio for professional web design & development services in Harare, Zimbabwe. Get a free consultation for your digital project.">
+		<meta name="keywords" content="contact Devstudio, web design Zimbabwe, web development Harare, digital agency contact, get quote">
+		
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="Contact Devstudio - Digital Solutions Studio Zimbabwe">
+		<meta property="og:description" content="Get in touch with Devstudio for professional web design & development services in Harare, Zimbabwe. Free consultations available.">
+		<meta property="og:image" content="https://devstudio.co.zw/images/og-contact.jpg">
+		<meta property="og:url" content="https://devstudio.co.zw/contact_page.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Devstudio">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Contact Devstudio - Digital Solutions Studio">
+		<meta name="twitter:description" content="Get in touch for professional web design & development services in Zimbabwe">
+		<meta name="twitter:image" content="https://devstudio.co.zw/images/og-contact.jpg">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Skip link for accessibility */
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 6px;
+				background: #000;
+				color: white;
+				padding: 8px;
+				z-index: 10000;
+				text-decoration: none;
+			}
+
+			.skip-link:focus {
+				top: 6px;
+			}
+
+			/* Form accessibility improvements */
+			.form-group {
+				margin-bottom: 1.5rem;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-weight: bold;
+			}
+
+			/* Focus styles for better accessibility */
+			input:focus, textarea:focus, select:focus {
+				outline: 2px solid #27ae60;
+				outline-offset: 2px;
+			}
+
+			/* WhatsApp Quick Link Popup */
+			#whatsapp-popup {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0.8);
+				background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+				color: white;
+				padding: 2rem;
+				border-radius: 15px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+				z-index: 10001;
+				text-align: center;
+				max-width: 400px;
+				width: 90%;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s ease;
+			}
+
+			#whatsapp-popup.active {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(-50%, -50%) scale(1);
+			}
+
+			#whatsapp-popup .popup-content {
+				position: relative;
+			}
+
+			#whatsapp-popup .close-popup {
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				background: white;
+				color: #25D366;
+				border: none;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				font-size: 18px;
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			}
+
+			#whatsapp-popup .whatsapp-icon {
+				font-size: 4rem;
+				margin-bottom: 1rem;
+				display: block;
+			}
+
+			#whatsapp-popup h3 {
+				margin-bottom: 1rem;
+				color: white;
+			}
+
+			#whatsapp-popup p {
+				margin-bottom: 1.5rem;
+				line-height: 1.6;
+			}
+
+			#whatsapp-popup .whatsapp-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				background: white;
+				color: #25D366;
+				padding: 12px 24px;
+				border-radius: 50px;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 1.1rem;
+				transition: all 0.3s ease;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			}
+
+			#whatsapp-popup .whatsapp-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+				background: #f8f9fa;
+			}
+
+			#whatsapp-popup .whatsapp-btn .icon {
+				font-size: 1.5rem;
+			}
+
+			/* Overlay */
+			#popup-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.7);
+				z-index: 10000;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s ease;
+			}
+
+			#popup-overlay.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			/* Screen reader only */
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+	<bod class="is-preload">
+
+		<!-- WhatsApp Quick Link Popup -->
+		<div id="popup-overlay"></div>
+		<div id="whatsapp-popup" role="dialog" aria-labelledby="popup-title" aria-modal="true">
+			<div class="popup-content">
+				<button class="close-popup" aria-label="Close popup">×</button>
+				<span class="icon brands fa-whatsapp whatsapp-icon" aria-hidden="true"></span>
+				<h3 id="popup-title">Get Quick Response!</h3>
+				<p>For faster response and immediate assistance, chat with us directly on WhatsApp. We typically reply within minutes during business hours.</p>
+				<a href="https://api.whatsapp.com/send?phone=263786811333&text=Hi%20Devstudio%2C%20I%20just%20submitted%20the%20contact%20form%20on%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20Can%20we%20chat%20about%20my%20project%3F" 
+				   class="whatsapp-btn" 
+				   target="_blank" 
+				   rel="noopener noreferrer"
+				   aria-label="Chat with us on WhatsApp for quick response">
+					<span class="icon brands fa-whatsapp" aria-hidden="true"></span>
+					Chat on WhatsApp
+				</a>
+			</div>
+		</div>
+
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+			<div id="page-wrapper"style='background-image:url(images/a1.jpg);'>
 				<!-- Header -->
-					<header id="header">
+					<header id="header" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
-						<nav id="nav">
+						<nav id="nav" role="navigation" aria-label="Main navigation">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
+									<a href="#menu" class="menuToggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></a>
+									<div id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Services</a></li>
+											<li><a href="service.html">Services</a></li>
 											<li><a href="portfolio.html">Portfolio</a></li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="contact_page.html">Contact</a></li>
 										</ul>
 									</div>
 								</li>
@@ -37,13 +237,13 @@
 					</header>
 
 				<!-- Main -->
-					<article id="main">
-						<header>
+					<article id="main" role="main" id="main-content">
+						<header role="banner"style="background-image: url(images/call-to.jpg);" >
 							<h2>Get In Touch</h2>
 							<p>Let's discuss your next project and create something amazing together</p>
 						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+						<section class="wrapper style5" style="background-image: url(images/a1.jpg);" aria-label="Contact form and information">
+							<div class="inner" style="background-color: rgba(0, 0, 0, 0.6);">
 								<!-- Contact Intro -->
 								<div class="box">
 									<h3>Ready to Start Your Project?</h3>
@@ -54,19 +254,23 @@
 									<!-- Contact Form -->
 									<div class="col-8 col-12-medium">
 										<h3>Send Us a Message</h3>
-										<form method="post" action="#" id="contact-form">
+										<form method="post" action="#" id="contact-form" aria-labelledby="contact-form-title">
 											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="name" id="name" value="" placeholder="Your Name" required />
+												<div class="col-6 col-12-xsmall form-group">
+													<label for="name" class="sr-only">Your Name</label>
+													<input type="text" name="name" id="name" value="" placeholder="Your Name" required aria-required="true" />
 												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="email" id="email" value="" placeholder="Your Email" required />
+												<div class="col-6 col-12-xsmall form-group">
+													<label for="email" class="sr-only">Your Email</label>
+													<input type="email" name="email" id="email" value="" placeholder="Your Email" required aria-required="true" />
 												</div>
-												<div class="col-12">
-													<input type="text" name="subject" id="subject" value="" placeholder="Subject" required />
+												<div class="col-12 form-group">
+													<label for="subject" class="sr-only">Subject</label>
+													<input type="text" name="subject" id="subject" value="" placeholder="Subject" required aria-required="true" />
 												</div>
-												<div class="col-12">
-													<select name="service" id="service">
+												<div class="col-12 form-group">
+													<label for="service">Service Interested In</label>
+													<select name="service" id="service" aria-describedby="service-description">
 														<option value="">Select Service</option>
 														<option value="web-design">Web Design</option>
 														<option value="development">Web Development</option>
@@ -75,14 +279,16 @@
 														<option value="mobile">Mobile Solutions</option>
 														<option value="other">Other</option>
 													</select>
+													<small id="service-description" class="sr-only">Choose the service you are interested in</small>
 												</div>
-												<div class="col-12">
-													<textarea name="message" id="message" placeholder="Tell us about your project..." rows="6" required></textarea>
+												<div class="col-12 form-group">
+													<label for="message" class="sr-only">Your Message</label>
+													<textarea name="message" id="message" placeholder="Tell us about your project..." rows="6" required aria-required="true"></textarea>
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
-														<li><input type="reset" value="Reset" /></li>
+														<li><input type="submit" value="Send Message" class="primary" aria-label="Submit your message" /></li>
+														<li><input type="reset" value="Reset Form" aria-label="Clear all form fields" /></li>
 													</ul>
 												</div>
 											</div>
@@ -92,17 +298,17 @@
 									<!-- Contact Information -->
 									<div class="col-4 col-12-medium">
 										<h3>Contact Information</h3>
-										<div class="box contact-info">
-											<h4><span class="icon solid fa-map-marker-alt"></span> Our Location</h4>
+										<div class="box contact-info" aria-label="Our contact details">
+											<h4><span class="icon solid fa-map-marker-alt" aria-hidden="true"></span> Our Location</h4>
 											<p>9633 Southview Park<br />Harare, Zimbabwe</p>
 											
-											<h4><span class="icon solid fa-phone"></span> Phone & WhatsApp</h4>
-											<p>(+263) 78 681 1333</p>
+											<h4><span class="icon solid fa-phone" aria-hidden="true"></span> Phone & WhatsApp</h4>
+											<p><a href="tel:+263786811333" aria-label="Call us at +263 78 681 1333">(+263) 78 681 1333</a></p>
 											
-											<h4><span class="icon solid fa-envelope"></span> Email</h4>
-											<p>devstudio.zw@gmail.com</p>
+											<h4><span class="icon solid fa-envelope" aria-hidden="true"></span> Email</h4>
+											<p><a href="mailto:devstudio.zw@gmail.com" aria-label="Email us at devstudio.zw@gmail.com">devstudio.zw@gmail.com</a></p>
 											
-											<h4><span class="icon solid fa-clock"></span> Working Hours</h4>
+											<h4><span class="icon solid fa-clock" aria-hidden="true"></span> Working Hours</h4>
 											<p>Monday - Friday: 9am - 6pm<br />
 											Saturday: 10am - 4pm<br />
 											Sunday: Closed</p>
@@ -113,9 +319,9 @@
 											<h4>Quick Connect</h4>
 											<p>Prefer to reach out directly? Use these quick contact methods:</p>
 											<ul class="actions stacked">
-												<li><a href="https://api.whatsapp.com/send?phone=263786811333" class="button fit" target="_blank"><span class="icon brands fa-whatsapp"></span> WhatsApp</a></li>
-												<li><a href="mailto:devstudio.zw@gmail.com" class="button fit"><span class="icon solid fa-envelope"></span> Send Email</a></li>
-												<li><a href="tel:+263786811333" class="button fit"><span class="icon solid fa-phone"></span> Call Now</a></li>
+												<li><a href="https://api.whatsapp.com/send?phone=263786811333" class="button fit" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><span class="icon brands fa-whatsapp" aria-hidden="true"></span> WhatsApp</a></li>
+												<li><a href="mailto:devstudio.zw@gmail.com" class="button fit" aria-label="Send us an email"><span class="icon solid fa-envelope" aria-hidden="true"></span> Send Email</a></li>
+												<li><a href="tel:+263786811333" class="button fit" aria-label="Call us now"><span class="icon solid fa-phone" aria-hidden="true"></span> Call Now</a></li>
 											</ul>
 										</div>
 									</div>
@@ -124,9 +330,9 @@
 								<hr />
 
 								<!-- FAQ Section -->
-								<section id="faq">
+								<section id="faq" aria-labelledby="faq-heading">
 									<header class="major">
-										<h2>Frequently Asked Questions</h2>
+										<h2 id="faq-heading">Frequently Asked Questions</h2>
 									</header>
 									<div class="row">
 										<div class="col-6 col-12-medium">
@@ -155,36 +361,36 @@
 								<hr />
 
 								<!-- Process Section -->
-								<section id="process">
+								<section id="process" aria-labelledby="process-heading">
 									<header class="major">
-										<h2>Our Process</h2>
+										<h2 id="process-heading">Our Process</h2>
 										<p>How we work with you to bring your vision to life</p>
 									</header>
 									<div class="row">
 										<div class="col-3 col-12-medium">
 											<div class="box process-step">
-												<span class="icon solid major fa-comments"></span>
+												<span class="icon solid major fa-comments" aria-hidden="true"></span>
 												<h4>1. Consultation</h4>
 												<p>We discuss your goals, audience, and requirements</p>
 											</div>
 										</div>
 										<div class="col-3 col-12-medium">
 											<div class="box process-step">
-												<span class="icon solid major fa-pencil-alt"></span>
+												<span class="icon solid major fa-pencil-alt" aria-hidden="true"></span>
 												<h4>2. Planning</h4>
 												<p>We create a detailed project plan and timeline</p>
 											</div>
 										</div>
 										<div class="col-3 col-12-medium">
 											<div class="box process-step">
-												<span class="icon solid major fa-code"></span>
+												<span class="icon solid major fa-code" aria-hidden="true"></span>
 												<h4>3. Development</h4>
 												<p>We build your solution with regular updates</p>
 											</div>
 										</div>
 										<div class="col-3 col-12-medium">
 											<div class="box process-step">
-												<span class="icon solid major fa-rocket"></span>
+												<span class="icon solid major fa-rocket" aria-hidden="true"></span>
 												<h4>4. Launch</h4>
 												<p>We deploy your project and provide training</p>
 											</div>
@@ -197,16 +403,16 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<footer id="footer" role="contentinfo"style='background-image:images/a1.jpg;'>
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dashboard" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest" rel="noopener noreferrer" target="_blank" aria-label="Visit our Pinterest board"><span class="label">Pinterest</span></a></li>
+							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope" aria-label="Send us an email"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Devstudio 2025</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li>
 						</ul>
 					</footer>
 			</div>
@@ -220,8 +426,42 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				// Contact Form Handling
+				// Contact Form Handling with WhatsApp Popup
 				$(document).ready(function() {
+					const whatsappPopup = $('#whatsapp-popup');
+					const popupOverlay = $('#popup-overlay');
+					const closePopup = $('.close-popup');
+
+					// Show WhatsApp popup function
+					function showWhatsAppPopup() {
+						popupOverlay.addClass('active');
+						whatsappPopup.addClass('active');
+						// Focus on the WhatsApp button for accessibility
+						setTimeout(() => {
+							$('.whatsapp-btn').focus();
+						}, 300);
+					}
+
+					// Hide WhatsApp popup function
+					function hideWhatsAppPopup() {
+						popupOverlay.removeClass('active');
+						whatsappPopup.removeClass('active');
+					}
+
+					// Close popup when clicking close button
+					closePopup.on('click', hideWhatsAppPopup);
+
+					// Close popup when clicking overlay
+					popupOverlay.on('click', hideWhatsAppPopup);
+
+					// Close popup when pressing Escape key
+					$(document).on('keydown', function(e) {
+						if (e.key === 'Escape' && whatsappPopup.hasClass('active')) {
+							hideWhatsAppPopup();
+						}
+					});
+
+					// Contact form submission
 					$('#contact-form').on('submit', function(e) {
 						e.preventDefault();
 						
@@ -231,8 +471,13 @@
 						var message = $('#message').val();
 						
 						if(name && email && message) {
-							// In a real implementation, you would send the form data to a server
+							// Show success message
 							alert('Thank you for your message! We will get back to you soon.');
+							
+							// Show WhatsApp popup after a short delay
+							setTimeout(showWhatsAppPopup, 500);
+							
+							// Reset the form
 							$('#contact-form')[0].reset();
 						} else {
 							alert('Please fill in all required fields.');

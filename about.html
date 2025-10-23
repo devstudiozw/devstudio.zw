@@ -4,25 +4,49 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>About Us - Devstudio</title>
+		<title>About Us - Devstudio | Web Design & Development Studio Zimbabwe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Learn about Devstudio - professional web design & development studio in Harare, Zimbabwe. Our story, mission, values, and expertise in digital solutions.">
+		<meta name="keywords" content="about Devstudio, web design Zimbabwe, digital agency Harare, our story, company mission, web development team">
+		
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="About Devstudio - Digital Solutions Studio Zimbabwe">
+		<meta property="og:description" content="Professional web design & development studio based in Harare, Zimbabwe. Learn about our story, mission, and expertise.">
+		<meta property="og:image" content="https://devstudio.co.zw/images/og-about.jpg">
+		<meta property="og:url" content="https://devstudio.co.zw/about.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Devstudio">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="About Devstudio - Digital Solutions Studio">
+		<meta name="twitter:description" content="Professional web design & development studio in Harare, Zimbabwe">
+		<meta name="twitter:image" content="https://devstudio.co.zw/images/og-about.jpg">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+		
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+			<div id="page-wrapper"style="background-image: url(images/a1.jpg);">
 				<!-- Header -->
-					<header id="header">
+					<header id="header" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
-						<nav id="nav">
+						<nav id="nav" role="navigation" aria-label="Main navigation">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
+									<a href="#menu" class="menuToggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></a>
+									<div id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About</a></li>
@@ -37,15 +61,13 @@
 					</header>
 
 				<!-- Main -->
-					<article id="main">
-						<header>
+					<article id="main" role="main" id="main-content">
+						<header role="banner"style="background-image: url(images/about-us.jpg);">
 							<h2>About Devstudio</h2>
 							<p>Professional web design and development studio based in Harare, Zimbabwe</p>
 						</header>
-						<section class="wrapper style5">
-							<div class="inner">
-                                <style>
-								</style>
+						<section class="wrapper style5" style="background-image: url(images/a1.jpg);" aria-label="About our company"overlay=>
+							<div class="inner" style="background-color: rgba(0, 0, 0, 0.6);">
 								<h3>Our Story</h3>
 								<p>Devstudio was founded with a vision to transform the digital landscape in Zimbabwe and beyond. We recognized the growing need for professional, responsive, and effective web solutions that help businesses thrive in the modern digital economy. Our journey began with a simple mission: to deliver exceptional digital experiences that drive real business results.</p>
 
@@ -128,7 +150,7 @@
 								<p>Whether you're starting a new business, launching a product, or looking to refresh your online presence, we'd love to hear about your project. Contact us today to discuss how we can help bring your vision to life and create a digital solution that drives your business forward.</p>
 
 								<ul class="actions">
-									<li><a href="contact.html" class="button primary">Get In Touch</a></li>
+									<li><a href="contact_page.html" class="button primary">Get In Touch</a></li>
 									<li><a href="portfolio.html" class="button">View Our Work</a></li>
 								</ul>
 
@@ -137,16 +159,16 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<footer id="footer" role="contentinfo">
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dashboard" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest" rel="noopener noreferrer" target="_blank" aria-label="Visit our Pinterest board"><span class="label">Pinterest</span></a></li>
+							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope" aria-label="Send us an email"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Devstudio 2025</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li><li>Domain: devstudio.co.zw</li>
 						</ul>
 					</footer>
 			</div>

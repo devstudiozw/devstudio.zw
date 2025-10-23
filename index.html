@@ -4,27 +4,136 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Devstudio - Digital Solutions Studio</title>
+		<title>Devstudio - Digital Solutions Studio | Web Design & Development Zimbabwe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Professional web design & development services in Harare, Zimbabwe. Custom websites, SEO optimization, and digital solutions for modern businesses.">
+		<meta name="keywords" content="web design Zimbabwe, web development Harare, SEO services Zimbabwe, digital agency, mobile app development">
+		
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="Devstudio - Digital Solutions Studio">
+		<meta property="og:description" content="Professional web design & development services in Harare, Zimbabwe. Custom websites, SEO, and digital solutions for modern businesses.">
+		<meta property="og:image" content="https://devstudio.co.zw/images/og-image.jpg">
+		<meta property="og:url" content="https://devstudio.co.zw">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Devstudio">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Devstudio - Digital Solutions Studio">
+		<meta name="twitter:description" content="Professional web design & development services in Zimbabwe">
+		<meta name="twitter:image" content="https://devstudio.co.zw/images/og-image.jpg">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Loading Screen Styles */
+			#loading-screen {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				z-index: 9999;
+				transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+			}
+
+			#loading-screen.fade-out {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			.loading-spinner {
+				width: 60px;
+				height: 60px;
+				border: 4px solid rgba(255, 255, 255, 0.3);
+				border-top: 4px solid #27ae60;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+				margin-bottom: 20px;
+			}
+
+			.loading-content {
+				text-align: center;
+				color: white;
+			}
+
+			.loading-content h3 {
+				margin-bottom: 10px;
+				font-size: 1.5em;
+				font-weight: 300;
+			}
+
+			.loading-progress {
+				width: 200px;
+				height: 4px;
+				border-radius: 2px;
+				overflow: hidden;
+				margin-top: 15px;
+			}
+
+			.loading-progress-bar {
+				height: 100%;
+				background: #27ae60;
+				width: 0%;
+				border-radius: 2px;
+				transition: width 0.3s ease;
+			}
+
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+
+			/* Hide page content during loading */
+			body.loading #page-wrapper {
+				opacity: 0;
+			}
+
+			body:not(.loading) #page-wrapper {
+				opacity: 1;
+				transition: opacity 0.5s ease-in;
+			}
+		</style>
 	</head>
-	<body class="landing is-preload">
+	<body class="landing is-preload loading">
+
+		<!-- Loading Screen -->
+		<div id="loading-screen">
+			<div class="loading-spinner"></div>
+			<div class="loading-content">
+				<h3>Devstudio</h3>
+				<p>Loading Digital Excellence...</p>
+				<div class="loading-progress">
+					<div class="loading-progress-bar" id="progress-bar"></div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+					<header id="header" class="alt" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
-						<nav id="nav">
+						<nav id="nav" role="navigation" aria-label="Main navigation">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
+									<a href="#menu" class="menuToggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></a>
+									<div id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About</a></li>
@@ -39,21 +148,21 @@
 					</header>
 
 				<!-- Banner -->
-					<section id="banner">
+					<section id="banner" role="banner">
 						<div class="inner">
 							<h2>Devstudio</h2>
 							<p>Professional Web Design & Development<br />
 							Digital Solutions for Modern Businesses<br />
 							Based in Harare, Zimbabwe</p>
 							<ul class="actions special">
-								<li><a href="#" class="button primary">Start Your Project</a></li>
+								<li><a href="contact_page.html" class="button primary">Start Your Project</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
 				<!-- One -->
-					<section id="one" class="wrapper style special">
+					<section id="one" class="wrapper style special" role="main" id="main-content">
 						<div class="inner">
 							<header class="major">
 								<h2>Crafting Digital Experiences<br />
@@ -62,31 +171,31 @@
 								web experiences that help your business thrive in the digital landscape.</p>
 							</header>
 							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Quality</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Passion</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Development</span></span></li>
+								<li><span class="icon fa-gem major style1" aria-hidden="true"><span class="label">Quality</span></span></li>
+								<li><span class="icon fa-heart major style2" aria-hidden="true"><span class="label">Passion</span></span></li>
+								<li><span class="icon solid fa-code major style3" aria-hidden="true"><span class="label">Development</span></span></li>
 							</ul>
 						</div>
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
+					<section id="two" class="wrapper alt style2" aria-label="Our Services">
 						<section class="spotlight">
-							<div class="image"><img src="images/img01.jpg" alt="Web Design" /></div><div class="content">
+							<div class="image"><img src="images/img01.png" alt="Custom web design and development for responsive websites" loading="lazy" /></div><div class="content">
 								<h2>Custom Web Design<br />
 								& Development</h2>
 								<p>Beautiful, responsive websites designed to engage users and reflect your brand identity across all devices. We create pixel-perfect designs with modern technologies.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/img02.jpg" alt="SEO Services" /></div><div class="content">
+							<div class="image"><img src="images/img02.jpg" alt="SEO and digital marketing services to increase online visibility" loading="lazy" /></div><div class="content">
 								<h2>SEO & Digital<br />
 								Marketing</h2>
 								<p>Increase your online visibility and drive targeted traffic with our comprehensive SEO strategies and digital marketing campaigns tailored to your business goals.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/img03.jpg" alt="Mobile Solutions" /></div><div class="content">
+							<div class="image"><img src="images/img03.jpg" alt="Mobile-first solutions for seamless cross-device experiences" loading="lazy" /></div><div class="content">
 								<h2>Mobile-First<br />
 								Solutions</h2>
 								<p>Progressive mobile-optimized designs that deliver seamless experiences across all devices, ensuring your business reaches customers everywhere.</p>
@@ -95,8 +204,8 @@
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style5 special"style="background-image: url(../images/a.jpg);">
-						<div class="inner">
+					<section id="three" class="wrapper style5 special" style="background-image: url(images/a.jpg);" aria-label="Our Comprehensive Services">
+						<div class="inner" style="background-color: rgba(0, 0, 0, 0.8);">
 							<header class="major">
 								<h2>Our Comprehensive Services</h2>
 								<p>We offer end-to-end digital solutions to transform your online presence<br />
@@ -132,30 +241,30 @@
 					</section>
 
 				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
+					<section id="cta" class="wrapper style4" role="region" aria-label="Call to Action">
 						<div class="inner">
 							<header>
 								<h2>Ready to Elevate Your Digital Presence?</h2>
 								<p>Let's discuss your project and create something amazing together. Get in touch for a free consultation.</p>
 							</header>
 							<ul class="actions stacked">
-								<li><a href="contact page.html" class="button fit primary">Start Your Project</a></li>
+								<li><a href="contact_page.html" class="button fit primary">Start Your Project</a></li>
 								<li><a href="portfolio.html" class="button fit">View Portfolio</a></li>
 							</ul>
 						</div>
 					</section>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<footer id="footer" role="contentinfo">
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dashboard" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest" rel="noopener noreferrer" target="_blank" aria-label="Visit our Pinterest board"><span class="label">Pinterest</span></a></li>
+							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope" aria-label="Send us an email"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li>
+							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li><li>Domain: devstudio.co.zw</li>
 						</ul>
 					</footer>
 
@@ -169,6 +278,41 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<script>
+			// Loading screen functionality
+			document.addEventListener('DOMContentLoaded', function() {
+				const loadingScreen = document.getElementById('loading-screen');
+				const progressBar = document.getElementById('progress-bar');
+				const body = document.body;
+				
+				let progress = 0;
+				const duration = 200; // 3 seconds
+				const interval = 5; // update every 50ms
+				const increment = (interval / duration) * 100;
+				
+				// Start progress animation
+				const progressInterval = setInterval(() => {
+					progress += increment;
+					if (progress >= 100) {
+						progress = 100;
+						clearInterval(progressInterval);
+						
+						// Hide loading screen after completion
+						setTimeout(() => {
+							loadingScreen.classList.add('fade-out');
+							body.classList.remove('loading');
+							
+							// Remove loading screen from DOM after transition
+							setTimeout(() => {
+								loadingScreen.remove();
+							}, 500);
+						}, 200);
+					}
+					progressBar.style.width = progress + '%';
+				}, interval);
+			});
+		</script>
 
 	</body>
 </html>

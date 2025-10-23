@@ -4,25 +4,105 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Our Portfolio - Devstudio</title>
+		<title>Our Portfolio - Devstudio | Web Design & Development Projects Zimbabwe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="View Devstudio's portfolio of web design & development projects in Zimbabwe. See our work across e-commerce, corporate websites, and digital solutions.">
+		<meta name="keywords" content="Devstudio portfolio, web design projects Zimbabwe, web development work, e-commerce websites, digital agency portfolio">
+		
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="Our Portfolio - Devstudio Digital Solutions Zimbabwe">
+		<meta property="og:description" content="Explore Devstudio's portfolio of web design & development projects. See how we've helped businesses in Zimbabwe succeed online.">
+		<meta property="og:image" content="https://devstudio.co.zw/images/og-portfolio.jpg">
+		<meta property="og:url" content="https://devstudio.co.zw/portfolio.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Devstudio">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Our Portfolio - Devstudio Digital Solutions">
+		<meta name="twitter:description" content="Web design & development portfolio showcasing our projects in Zimbabwe">
+		<meta name="twitter:image" content="https://devstudio.co.zw/images/og-portfolio.jpg">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+		 /* Portfolio enhancements */
+			.portfolio-card {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.portfolio-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+			}
+
+			.portfolio-tags {
+				margin: 1rem 0;
+				flex-grow: 1;
+			}
+
+			.tag {
+				display: inline-block;
+				background: #27ae60;
+				color: white;
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.8rem;
+				margin: 0.2rem;
+			}
+
+			.author {
+				margin-top: 1rem;
+				font-weight: bold;
+			}
+
+			.author em {
+				font-style: normal;
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			/* Screen reader only */
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 				<!-- Header -->
-					<header id="header">
+					<header id="header" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
-						<nav id="nav">
+						<nav id="nav" role="navigation" aria-label="Main navigation">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
+									<a href="#menu" class="menuToggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></a>
+									<div id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About</a></li>
@@ -37,39 +117,39 @@
 					</header>
 
 				<!-- Main -->
-					<article id="main">
-						<header>
+					<article id="main" role="main" id="main-content">
+						<header role="banner"style="background-image: url(images/portfolio.jpg);">
 							<h2>Our Portfolio</h2>
 							<p>Showcasing our best work across various industries</p>
 						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+						<section class="wrapper style5" style="background-image: url(images/a3.jpg);" aria-label="Our portfolio projects">
+							<div class="inner" style="background-color: rgba(0, 0, 0, 0.849);">
 								<h3>Featured Projects</h3>
 								<p>We take pride in every project we deliver. Here's a selection of our recent work that demonstrates our expertise in web design, development, and digital solutions.</p>
 
 								<hr />
 
 								<!-- Portfolio Filter -->
-								<div class="portfolio-filter">
+								<div class="portfolio-filter" role="group" aria-label="Filter portfolio projects">
 									<ul class="actions">
-										<li><a href="#" class="button primary small active" data-filter="all">All Projects</a></li>
-										<li><a href="#" class="button small" data-filter="web-design">Web Design</a></li>
+										<li><a href="#" class="button primary small active" data-filter="all" aria-pressed="true">All Projects</a></li>
+										<li><a href="#" class="button small" data-filter="web-design" aria-pressed="false">Web Design</a></li>
 									</ul>
 								</div>
-								<div class="portfolio-filter">
+								<div class="portfolio-filter" role="group" aria-label="More filter options">
 									<ul class="actions">
-										<li><a href="#" class="button small" data-filter="branding">Branding</a></li>
-										<li><a href="#" class="button small" data-filter="seo">SEO</a></li>
+										<li><a href="#" class="button small" data-filter="branding" aria-pressed="false">Branding</a></li>
+										<li><a href="#" class="button small" data-filter="seo" aria-pressed="false">SEO</a></li>
 									</ul>
 								</div>
 
 								<!-- Portfolio Cards -->
-								<div class="row portfolio-items">
+								<div class="row portfolio-items" aria-live="polite" aria-atomic="true">
 									<!-- Crayon Prix -->
 									<div class="col-6 col-12-medium portfolio-item" data-category="web-design ecommerce">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img1.jpg" alt="Crayon Prix Website" />
+												<img src="images/img1.jpg" alt="Crayon Prix e-commerce website showcasing art supplies store with product catalog"/>
 											</div>
 											<h3>Crayon Prix</h3>
 											<p>Complete e-commerce website for an art supplies store featuring product catalog, shopping cart, and secure payment integration.</p>
@@ -79,7 +159,7 @@
 												<span class="tag">WordPress</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="https://bee6520.github.io/preschool.github.io/" class="button" target="_blank">View Live Site</a></li>
+												<li><a href="https://bee6520.github.io/preschool.github.io/" class="button" target="_blank" rel="noopener noreferrer" aria-label="Visit Crayon Prix live website">View Live Site</a></li>
 											</ul>
 										</div>
 									</div>
@@ -88,7 +168,7 @@
 									<div class="col-6 col-12-medium portfolio-item" data-category="web-design seo">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img2.png" alt="Tipgee Cleaning Service" />
+												<img src="images/img2.png" alt="Tipgee Cleaning Service website with online booking system and service packages" loading="lazy" />
 											</div>
 											<h3>Tipgee Cleaning Service</h3>
 											<p>Service-based website with online booking system, service packages, and customer testimonials. Increased bookings by 45%.</p>
@@ -98,7 +178,7 @@
 												<span class="tag">Booking System</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="https://bee6520.github.io/Tipgee/" class="button small" target="_blank">View Live Site</a></li>
+												<li><a href="https://bee6520.github.io/Tipgee/" class="button small" target="_blank" rel="noopener noreferrer" aria-label="Visit Tipgee Cleaning Service live website">View Live Site</a></li>
 											</ul>
 										</div>
 									</div>
@@ -107,7 +187,7 @@
 									<div class="col-6 col-12-medium portfolio-item" data-category="web-design branding">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img3.jpg" alt="Preschool Website" />
+												<img src="images/img3.jpg" alt="Bright Minds Preschool website with vibrant design and enrollment forms" loading="lazy" />
 											</div>
 											<h3>Bright Minds Preschool</h3>
 											<p>Vibrant, family-friendly website for a preschool with photo galleries, enrollment forms, and parent resources section.</p>
@@ -117,7 +197,7 @@
 												<span class="tag">Education</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="https://bee6520.github.io/preschool.github.io/" class="button small" target="_blank">View Live Site</a></li>
+												<li><a href="https://bee6520.github.io/preschool.github.io/" class="button small" target="_blank" rel="noopener noreferrer" aria-label="Visit Bright Minds Preschool live website">View Live Site</a></li>
 											</ul>
 										</div>
 									</div>
@@ -126,7 +206,7 @@
 									<div class="col-6 col-12-medium portfolio-item" data-category="ecommerce branding">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img4.jpg" alt="Icon Fashion Website" />
+												<img src="images/img4.jpg" alt="Icon Fashion e-commerce platform with advanced filtering and size guides" loading="lazy" />
 											</div>
 											<h3>Icon Fashion</h3>
 											<p>Fashion e-commerce platform with advanced filtering, size guides, and lookbook features. Integrated with inventory management.</p>
@@ -136,7 +216,7 @@
 												<span class="tag">Fashion</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="#" class="button small">Case Study</a></li>
+												<li><a href="#" class="button small" aria-label="View Icon Fashion case study details">Case Study</a></li>
 											</ul>
 										</div>
 									</div>
@@ -145,7 +225,7 @@
 									<div class="col-6 col-12-medium portfolio-item" data-category="web-design seo">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img5.jpg" alt="Corporate Website" />
+												<img src="images/img5.jpg" alt="TechSolutions Inc corporate website with investor relations and team profiles" loading="lazy" />
 											</div>
 											<h3>TechSolutions Inc.</h3>
 											<p>Professional corporate website with investor relations section, team profiles, and service showcase. Improved lead generation by 68%.</p>
@@ -155,7 +235,7 @@
 												<span class="tag">Corporate</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="#" class="button small">View Details</a></li>
+												<li><a href="#" class="button small" aria-label="View TechSolutions Inc project details">View Details</a></li>
 											</ul>
 										</div>
 									</div>
@@ -164,7 +244,7 @@
 									<div class="col-6 col-12-medium portfolio-item" data-category="web-design branding">
 										<div class="box portfolio-card">
 											<div class="image fit">
-												<img src="images/img6.jpg" alt="Restaurant Website" />
+												<img src="images/img6.jpg" alt="Saffron Bistro restaurant website with online menu and reservation system" loading="lazy" />
 											</div>
 											<h3>Saffron Bistro</h3>
 											<p>Restaurant website with online menu, reservation system, and food photography. Mobile-optimized for on-the-go customers.</p>
@@ -174,7 +254,7 @@
 												<span class="tag">Hospitality</span>
 											</div>
 											<ul class="actions stacked">
-												<li><a href="#" class="button small">View Project</a></li>
+												<li><a href="#" class="button small" aria-label="View Saffron Bistro project details">View Project</a></li>
 											</ul>
 										</div>
 									</div>
@@ -183,9 +263,9 @@
 								<hr />
 
 								<!-- Client Testimonials -->
-								<section id="testimonials">
+								<section id="testimonials" aria-labelledby="testimonials-heading">
 									<header class="major">
-										<h2>What Our Clients Say</h2>
+										<h2 id="testimonials-heading">What Our Clients Say</h2>
 									</header>
 									<div class="row">
 										<div class="col-4 col-12-medium">
@@ -221,14 +301,14 @@
 								<hr />
 
 								<!-- Call to Action -->
-								<section id="cta-portfolio">
+								<section id="cta-portfolio" aria-labelledby="cta-heading">
 									<header class="major">
-										<h2>Ready to Start Your Project?</h2>
+										<h2 id="cta-heading">Ready to Start Your Project?</h2>
 										<p>Let's create something amazing together. Contact us to discuss your next web project.</p>
 									</header>
 									<ul class="actions">
-										<li><a href="contact.html" class="button primary">Get In Touch</a></li>
-										<li><a href="services.html" class="button">View Services</a></li>
+										<li><a href="contact_page.html" class="button primary" aria-label="Get in touch with Devstudio">Get In Touch</a></li>
+										<li><a href="service.html" class="button" aria-label="View our services">View Services</a></li>
 									</ul>
 								</section>
 
@@ -237,16 +317,16 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<footer id="footer" role="contentinfo">
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dashboard" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest" rel="noopener noreferrer" target="_blank" aria-label="Visit our Pinterest board"><span class="label">Pinterest</span></a></li>
+							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope" aria-label="Send us an email"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Devstudio 2025</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li><li>Domain: devstudio.co.zw</li>
 						</ul>
 					</footer>
 			</div>
@@ -265,9 +345,9 @@
 					$('.portfolio-filter a').click(function(e) {
 						e.preventDefault();
 						
-						// Update active button
-						$('.portfolio-filter a').removeClass('active');
-						$(this).addClass('active');
+						// Update active button and ARIA states
+						$('.portfolio-filter a').removeClass('active').attr('aria-pressed', 'false');
+						$(this).addClass('active').attr('aria-pressed', 'true');
 						
 						// Get filter value
 						var filter = $(this).data('filter');
@@ -284,6 +364,14 @@
 							});
 						}
 					});
+
+					// Lazy loading enhancement
+					if ('loading' in HTMLImageElement.prototype) {
+						const images = document.querySelectorAll('img[loading="lazy"]');
+						images.forEach(img => {
+							img.src = img.dataset.src;
+						});
+					}
 				});
 			</script>
 	</body>

@@ -4,25 +4,126 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Our Services - Devstudio</title>
+		<title>Our Services - Devstudio | Web Design & Development Services Zimbabwe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Professional web design, development, SEO, and branding services in Zimbabwe. Affordable digital solutions for businesses of all sizes.">
+		<meta name="keywords" content="web design services Zimbabwe, web development Harare, SEO services, branding, digital agency services">
+		
+		<!-- Open Graph / Social Media Meta Tags -->
+		<meta property="og:title" content="Our Services - Devstudio Digital Solutions Zimbabwe">
+		<meta property="og:description" content="Professional web design, development, SEO, and branding services in Zimbabwe. Get affordable digital solutions for your business.">
+		<meta property="og:image" content="https://devstudio.co.zw/images/og-services.jpg">
+		<meta property="og:url" content="https://devstudio.co.zw/service.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Devstudio">
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Our Services - Devstudio Digital Solutions">
+		<meta name="twitter:description" content="Professional web design, development, and SEO services in Zimbabwe">
+		<meta name="twitter:image" content="https://devstudio.co.zw/images/og-services.jpg">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+		
+		<!-- Preload critical resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Skip link for accessibility */
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 6px;
+				background: #000;
+				color: white;
+				padding: 8px;
+				z-index: 10000;
+				text-decoration: none;
+			}
+
+			.skip-link:focus {
+				top: 6px;
+			}
+
+			/* Service card enhancements */
+			.service-card {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+			}
+
+			.service-card .icon {
+				color: #27ae60;
+				margin-bottom: 1rem;
+			}
+
+			.pricing-row {
+				background-color: rgba(39, 174, 96, 0.1);
+				font-weight: bold;
+			}
+
+			.pricing-row td {
+				border-top: 2px solid #27ae60;
+			}
+
+			/* Focus styles for accessibility */
+			.service-card a:focus,
+			.pricing-table a:focus {
+				outline: 2px solid #27ae60;
+				outline-offset: 2px;
+			}
+
+			/* Screen reader only */
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+			}
+
+			/* Background overlay for better readability */
+			.background-overlay {
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 2rem;
+				border-radius: 10px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+
+		<!-- Skip to main content for accessibility -->
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 				<!-- Header -->
-					<header id="header">
+					<header id="header" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
-						<nav id="nav">
+						<nav id="nav" role="navigation" aria-label="Main navigation">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
+									<a href="#menu" class="menuToggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></a>
+									<div id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About</a></li>
@@ -37,12 +138,12 @@
 					</header>
 
 				<!-- Main -->
-					<article id="main">
-						<header>
+					<article id="main" role="main" id="main-content">
+						<header role="banner">
 							<h2>Our Services</h2>
 							<p>Comprehensive digital solutions to elevate your online presence</p>
 						</header>
-						<section class="wrapper style5">
+						<section class="wrapper style5" style="background-image: url(images/a7.jpg);" aria-label="Our services overview">
 							<div class="inner">
 								<h3>Comprehensive Digital Solutions</h3>
 								<p>At Devstudio, we offer a full spectrum of web design and development services tailored to meet your business needs. From initial concept to final deployment, we work with you to create digital experiences that drive results.</p>
@@ -50,14 +151,16 @@
 								<hr />
 
 								<!-- Services Cards Section -->
-								<section id="services-cards">
+								<section id="services-cards" aria-labelledby="services-heading">
+									<h4 id="services-heading" class="sr-only">Our Service Packages</h4>
 									<div class="row">
 										<!-- Web Design Card -->
 										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-magic"></span>
+											<div class="box service-card">
+												<span class="icon solid major fa-magic" aria-hidden="true"></span>
 												<h3>Web Design</h3>
 												<p>We create beautiful, responsive websites that engage users and reflect your brand identity across all devices. Our designs combine aesthetics with functionality to deliver exceptional user experiences.</p>
+												<h4>Price: $250 - $450</h4>
 												<h5>What's Included:</h5>
 												<ul>
 													<li>Custom responsive design</li>
@@ -66,90 +169,74 @@
 													<li>Mobile-first approach</li>
 													<li>Cross-browser compatibility</li>
 												</ul>
-											</div>
-										</div>
-										
-										<!-- Frontend Development Card -->
-										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-code"></span>
-												<h3>Frontend Development</h3>
-												<p>Modern frontend architectures using React, Vue.js and Angular for dynamic, interactive user experiences. We build fast, scalable applications that perform excellently across all platforms.</p>
-												<h5>What's Included:</h5>
 												<ul>
-													<li>React/Vue.js/Angular development</li>
-													<li>Progressive Web Apps (PWA)</li>
-													<li>Interactive UI components</li>
-													<li>Performance optimization</li>
-													<li>Code maintainability</li>
+													<li><em>Price determined by type of business, purpose of website, and number of weekly support hours</em></li>
+												</ul>
+												<ul class="actions">
+													<li><a href="contact_page.html" class="button primary" aria-label="Get started with web design service">Get Started</a></li>
 												</ul>
 											</div>
 										</div>
-										
+
 										<!-- SEO Optimization Card -->
 										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-line-chart"></span>
+											<div class="box service-card">
+												<span class="icon solid major fa-chart-line" aria-hidden="true"></span>
 												<h3>SEO Optimization</h3>
 												<p>Increase visibility and organic traffic with our comprehensive search engine optimization strategies. We implement proven techniques to improve your search rankings and drive qualified traffic.</p>
+												<h4>Price: $50 - $100/month</h4>
 												<h5>What's Included:</h5>
 												<ul>
 													<li>Keyword research & strategy</li>
-													<li>On-page optimization</li>
-													<li>Technical SEO audit</li>
-													<li>Content optimization</li>
+													<li>Digital marketing</li>
+													<li>Social media optimization</li>
+													<li>Local SEO</li>
 													<li>Performance reporting</li>
 												</ul>
-											</div>
-										</div>
-										
-										<!-- Mobile Solutions Card -->
-										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-mobile"></span>
-												<h3>Mobile Solutions</h3>
-												<p>Mobile-first designs and progressive web apps for seamless cross-device experiences. We ensure your website performs flawlessly on smartphones, tablets, and other mobile devices.</p>
-												<h5>What's Included:</h5>
-												<ul>
-													<li>Responsive design implementation</li>
-													<li>Progressive Web App development</li>
-													<li>Touch-friendly interfaces</li>
-													<li>Mobile performance optimization</li>
-													<li>Cross-device testing</li>
+												<ul class="actions">
+													<li><a href="contact_page.html" class="button primary" aria-label="Get started with SEO optimization service">Get Started</a></li>
 												</ul>
 											</div>
 										</div>
 										
 										<!-- Brand Identity Card -->
 										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-paint-brush"></span>
+											<div class="box service-card">
+												<span class="icon solid major fa-paint-brush" aria-hidden="true"></span>
 												<h3>Brand Identity</h3>
 												<p>Complete branding solutions including logos and business materials that establish a strong visual identity for your business. We create cohesive brand systems that resonate with your audience.</p>
+												<h4>Price: $70 - $200</h4>
 												<h5>What's Included:</h5>
 												<ul>
 													<li>Logo design & branding</li>
-													<li>Style guide development</li>
-													<li>Brand collateral design</li>
-													<li>Visual identity systems</li>
+													<li>Company profiles</li>
+													<li>Business cards</li>
+													<li>Brochures</li>
 													<li>Brand consistency across platforms</li>
+												</ul>
+												<ul class="actions">
+													<li><a href="contact_page.html" class="button primary" aria-label="Get started with brand identity service">Get Started</a></li>
 												</ul>
 											</div>
 										</div>
-										
-										<!-- Performance Optimization Card -->
+
+										<!-- Custom Solutions Card -->
 										<div class="col-6 col-12-medium">
-											<div class="box">
-												<span class="icon solid major fa-rocket"></span>
-												<h3>Performance Optimization</h3>
-												<p>Lightning-fast page loads and optimized code for superior user experience and SEO rankings. We fine-tune every aspect of your website to ensure optimal performance.</p>
+											<div class="box service-card">
+												<span class="icon solid major fa-cogs" aria-hidden="true"></span>
+												<h3>Custom Solutions</h3>
+												<p>Let's talk and create a tailor-made solution for you. We specialize in building custom digital solutions that perfectly fit your unique business requirements.</p>
+												<h4>Custom Pricing</h4>
 												<h5>What's Included:</h5>
 												<ul>
-													<li>Page speed optimization</li>
-													<li>Code minification & compression</li>
-													<li>Image optimization</li>
-													<li>Caching strategies</li>
-													<li>Performance monitoring</li>
+													<li>Custom requirements analysis</li>
+													<li>Dedicated development team</li>
+													<li>Ongoing partnership</li>
+													<li>Scalable solutions</li>
+													<li>Technical support</li>
+												</ul>
+												<ul class="actions">
+													<li><a href="contact_page.html" class="button primary" aria-label="Discuss custom solution requirements">Let's Talk</a></li>
 												</ul>
 											</div>
 										</div>
@@ -159,76 +246,65 @@
 								<hr />
 
 								<!-- Pricing Table Section -->
-								<section id="pricing-table">
+								<section id="pricing-table" aria-labelledby="pricing-heading">
 									<header class="major">
-										<h2>Service Packages & Pricing</h2>
+										<h2 id="pricing-heading">Service Packages & Pricing</h2>
 										<p>Flexible options designed for businesses of all sizes</p>
 									</header>
 									
 									<div class="table-wrapper">
-										<table class="alt">
+										<table class="alt" aria-describedby="pricing-description">
+											<caption id="pricing-description" class="sr-only">Pricing table showing different service packages and their features</caption>
 											<thead>
 												<tr>
-													<th>Service</th>
-													<th>Starter Package</th>
-													<th>Business Package</th>
-													<th>Enterprise Package</th>
+													<th scope="col">Service</th>
+													<th scope="col">Starter Package</th>
+													<th scope="col">Business Package</th>
+													<th scope="col">Enterprise Package</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td><strong>Web Design</strong></td>
+													<th scope="row"><strong>Web Design</strong></th>
 													<td>5-page responsive website</td>
 													<td>10-page custom design with animations</td>
 													<td>Unlimited pages with advanced interactions</td>
 												</tr>
 												<tr>
-													<td><strong>Frontend Development</strong></td>
-													<td>Basic React components</td>
-													<td>Advanced React/Vue.js application</td>
-													<td>Full-stack application with API integration</td>
-												</tr>
-												<tr>
-													<td><strong>SEO Optimization</strong></td>
+													<th scope="row"><strong>SEO Optimization</strong></th>
 													<td>Basic on-page SEO</td>
 													<td>Comprehensive SEO with monthly reports</td>
 													<td>Full SEO strategy with ongoing optimization</td>
 												</tr>
 												<tr>
-													<td><strong>Mobile Solutions</strong></td>
-													<td>Responsive design</td>
-													<td>Progressive Web App</td>
-													<td>Native app features with PWA</td>
-												</tr>
-												<tr>
-													<td><strong>Brand Identity</strong></td>
+													<th scope="row"><strong>Brand Identity</strong></th>
 													<td>Logo + basic branding</td>
 													<td>Full brand identity system</td>
 													<td>Complete brand strategy & collateral</td>
 												</tr>
 												<tr>
-													<td><strong>Performance Optimization</strong></td>
+													<th scope="row"><strong>Performance Optimization</strong></th>
 													<td>Basic speed optimization</td>
 													<td>Comprehensive performance audit & fixes</td>
 													<td>Ongoing performance monitoring & optimization</td>
 												</tr>
 												<tr>
-													<td><strong>Support & Maintenance</strong></td>
-													<td>1 month support</td>
-													<td>3 months support</td>
-													<td>6 months support + hosting</td>
+													<th scope="row"><strong>Support & Maintenance</strong></th>
+													<td>1 month support + 1 year hosting</td>
+													<td>2 months support + 2 year hosting</td>
+													<td>3 months support + 3 year hosting</td>
 												</tr>
 												<tr>
-													<td><strong>Delivery Time</strong></td>
+													<th scope="row"><strong>Delivery Time</strong></th>
 													<td>2-3 weeks</td>
 													<td>4-5 weeks</td>
 													<td>6-8 weeks</td>
 												</tr>
 												<tr class="pricing-row">
-													<td><strong>Price</strong></td>
-													<td><strong>$150 - $300</strong></td>
-													<td><strong>$300 - $600</strong></td>
-													<td><strong>$600 - $1,200+</strong></td>
+													<th scope="row"><strong>Price</strong></th>
+													<td><strong>$250 - $300</strong></td>
+													<td><strong>$350 - $500</strong></td>
+													<td><strong>$550 - $1000</strong></td>
 												</tr>
 											</tbody>
 										</table>
@@ -236,35 +312,37 @@
 									
 									<div class="box">
 										<h4>Custom Solutions</h4>
-										<p>Don't see exactly what you need? We offer fully customized solutions tailored to your specific requirements. <a href="contact.html">Contact us</a> for a personalized quote based on your project scope, timeline, and budget.</p>
+										<p>Don't see exactly what you need? We offer fully customized solutions tailored to your specific requirements. <a href="contact_page.html">Contact us</a> for a personalized quote based on your project scope, timeline, and budget.</p>
 									</div>
 								</section>
 
 								<hr />
 
-								<h4>Ready to Get Started?</h4>
-								<p>Whether you need a single service or a complete digital solution, we're here to help bring your vision to life. Our team will work closely with you to understand your goals and deliver results that exceed your expectations.</p>
+								<section aria-labelledby="cta-heading">
+									<h4 id="cta-heading">Ready to Get Started?</h4>
+									<p>Whether you need a single service or a complete digital solution, we're here to help bring your vision to life. Our team will work closely with you to understand your goals and deliver results that exceed your expectations.</p>
 
-								<ul class="actions">
-									<li><a href="contact.html" class="button primary">Get a Free Quote</a></li>
-									<li><a href="portfolio.html" class="button">View Our Work</a></li>
-								</ul>
+									<ul class="actions">
+										<li><a href="contact_page.html" class="button primary" aria-label="Get a free quote for our services">Get a Free Quote</a></li>
+										<li><a href="portfolio.html" class="button" aria-label="View our portfolio of work">View Our Work</a></li>
+									</ul>
+								</section>
 
 							</div>
 						</section>
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
+					<footer id="footer" role="contentinfo">
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dashboard" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.pinterest.com/devstudiozw/" class="icon brands fa-pinterest" rel="noopener noreferrer" target="_blank" aria-label="Visit our Pinterest board"><span class="label">Pinterest</span></a></li>
+							<li><a href="mailto:devstudio.zw@gmail.com" class="icon solid fa-envelope" aria-label="Send us an email"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Devstudio 2025</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Devstudio 2025</li><li>Design: <a href="about.html">devstudio</a></li><li>Domain: devstudio.co.zw</li>
 						</ul>
 					</footer>
 			</div>
