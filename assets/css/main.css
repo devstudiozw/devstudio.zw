@@ -72,6 +72,16 @@ input, select, textarea {
 	appearance: none;
 }
 
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(21, 161, 63, 0);
+	z-index: 1;
+}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -3181,7 +3191,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 label {
-				color: #2E3842;
+				color: #fafbfc;
 			}
 
 			.wrapper.style5 input[type="text"],
@@ -3189,7 +3199,7 @@ input, select, textarea {
 			.wrapper.style5 input[type="email"],
 			.wrapper.style5 select,
 			.wrapper.style5 textarea {
-				background-color: rgba(0, 0, 0, 0.0375);
+				background-color: rgb(3, 36, 75);
 			}
 
 			.wrapper.style5 select {
@@ -3254,7 +3264,7 @@ input, select, textarea {
 				}
 
 			.wrapper.style5 table th {
-				color: #2E3842;
+				color: #8fc5fa;
 			}
 
 			.wrapper.style5 table thead {
@@ -3347,12 +3357,12 @@ input, select, textarea {
 		-webkit-transform: translateX(20em);
 		-ms-transform: translateX(20em);
 		transform: translateX(20em);
-		-moz-transition: -moz-transform 0.5s ease;
-		-webkit-transition: -webkit-transform 0.5s ease;
-		-ms-transition: -ms-transform 0.5s ease;
+		-moz-transition: transform 0.5s ease;
+		-webkit-transition: transform 0.5s ease;
+		-ms-transition: transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #079425;
+		background: #20323d;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3363,7 +3373,8 @@ input, select, textarea {
 		top: 0;
 		width: 20em;
 		z-index: 10002;
-	}
+		-o-transition: transform 0.5s ease;
+}
 
 		#menu ul {
 			list-style: none;
@@ -3433,11 +3444,11 @@ input, select, textarea {
 		}
 
 	body.is-menu-visible #menu {
-		-moz-transform:;
-		-webkit-transform:;
-		-ms-transform:;
+		-moz-transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
 		transform: translateX(0);
-		-o-transform:;
+		-o-transform: translateX(0);
 }
 
 /* Header */
@@ -3455,7 +3466,8 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 10000;
-	}
+		-o-transition: background-color 0.2s ease;
+}
 
 		#header h1 {
 			-moz-transition: opacity 0.2s ease;
@@ -3817,10 +3829,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3889,7 +3901,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 6em 0 4em 0 ;
-		background-color: #1d242a;
+		background-color: #1d242a00;
 		text-align: center;
 	}
 
@@ -3967,10 +3979,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3979,7 +3991,7 @@ input, select, textarea {
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: rgba(29, 36, 42, 0.192);
 	}
 
 	body.is-mobile.landing #page-wrapper {
@@ -3988,15 +4000,15 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.png");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	body.is-mobile.landing #footer {
-		background-color: #1d242a;
+		background-color: #1d242a41;
 	}
