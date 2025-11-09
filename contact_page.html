@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Spectral by HTML5 UP
@@ -6,6 +7,16 @@
 -->
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW7FT0DCQF"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-WW7FT0DCQF');
+		</script>
+		
 		<title>Contact Us - Devstudio | Get in Touch for Web Design & Development</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -190,9 +201,20 @@
 				white-space: nowrap;
 				border: 0;
 			}
+
+			/* WhatsApp button styling */
+			.whatsapp-button {
+				background-color: #25D366 !important;
+				border-color: #25D366 !important;
+			}
+
+			.whatsapp-button:hover {
+				background-color: #128C7E !important;
+				border-color: #128C7E !important;
+			}
 		</style>
 	</head>
-	<bod class="is-preload">
+	<body class="is-preload">
 
 		<!-- WhatsApp Quick Link Popup -->
 		<div id="popup-overlay"></div>
@@ -202,7 +224,7 @@
 				<span class="icon brands fa-whatsapp whatsapp-icon" aria-hidden="true"></span>
 				<h3 id="popup-title">Get Quick Response!</h3>
 				<p>For faster response and immediate assistance, chat with us directly on WhatsApp. We typically reply within minutes during business hours.</p>
-				<a href="https://api.whatsapp.com/send?phone=263786811333&text=Hi%20Devstudio%2C%20I%20just%20submitted%20the%20contact%20form%20on%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20Can%20we%20chat%20about%20my%20project%3F" 
+				<a href="https://wa.me/263786811333?text=Hi%20Devstudio%2C%20I%20just%20submitted%20the%20contact%20form%20on%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20Can%20we%20chat%20about%20my%20project%3F" 
 				   class="whatsapp-btn" 
 				   target="_blank" 
 				   rel="noopener noreferrer"
@@ -214,7 +236,7 @@
 		</div>
 
 		<!-- Page Wrapper -->
-			<div id="page-wrapper"style='background-image:url(images/a1.jpg);'>
+			<div id="page-wrapper" style='background-image:url(images/a1.jpg);'>
 				<!-- Header -->
 					<header id="header" role="banner">
 						<h1><a href="index.html">Devstudio</a></h1>
@@ -238,7 +260,7 @@
 
 				<!-- Main -->
 					<article id="main" role="main" id="main-content">
-						<header role="banner"style="background-image: url(images/call-to.jpg);" >
+						<header role="banner" style="background-image: url(images/call-to.jpg);">
 							<h2>Get In Touch</h2>
 							<p>Let's discuss your next project and create something amazing together</p>
 						</header>
@@ -272,11 +294,10 @@
 													<label for="service">Service Interested In</label>
 													<select name="service" id="service" aria-describedby="service-description">
 														<option value="">Select Service</option>
-														<option value="web-design">Web Design</option>
-														<option value="development">Web Development</option>
-														<option value="seo">SEO & Digital Marketing</option>
-														<option value="branding">Brand Identity</option>
-														<option value="mobile">Mobile Solutions</option>
+														<option value="website-solutions">Website Solutions</option>
+														<option value="digital-marketing">Digital Marketing</option>
+														<option value="graphic-design">Graphic Design</option>
+														<option value="custom-solutions">Custom Solutions</option>
 														<option value="other">Other</option>
 													</select>
 													<small id="service-description" class="sr-only">Choose the service you are interested in</small>
@@ -319,7 +340,7 @@
 											<h4>Quick Connect</h4>
 											<p>Prefer to reach out directly? Use these quick contact methods:</p>
 											<ul class="actions stacked">
-												<li><a href="https://api.whatsapp.com/send?phone=263786811333" class="button fit" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><span class="icon brands fa-whatsapp" aria-hidden="true"></span> WhatsApp</a></li>
+												<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I%20visited%20your%20contact%20page%20and%20I'd%20like%20to%20discuss%20a%20project%20with%20you." class="button fit whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><span class="icon brands fa-whatsapp" aria-hidden="true"></span> WhatsApp</a></li>
 												<li><a href="mailto:devstudio.zw@gmail.com" class="button fit" aria-label="Send us an email"><span class="icon solid fa-envelope" aria-hidden="true"></span> Send Email</a></li>
 												<li><a href="tel:+263786811333" class="button fit" aria-label="Call us now"><span class="icon solid fa-phone" aria-hidden="true"></span> Call Now</a></li>
 											</ul>
@@ -403,8 +424,9 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer" role="contentinfo"style='background-image:images/a1.jpg;'>
+					<footer id="footer" role="contentinfo" style='background-image:images/a1.jpg;'>
 						<ul class="icons">
+							<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20services." class="icon brands fa-whatsapp whatsapp-button" rel="noopener noreferrer" target="_blank" aria-label="Contact us on WhatsApp"><span class="label">WhatsApp</span></a></li>
 							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
 							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>

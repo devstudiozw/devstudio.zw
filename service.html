@@ -6,6 +6,16 @@
 -->
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW7FT0DCQF"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-WW7FT0DCQF');
+		</script>
+		
 		<title>Our Services - Devstudio | Web Design & Development Services Zimbabwe</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -38,22 +48,6 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
-			/* Skip link for accessibility */
-			.skip-link {
-				position: absolute;
-				top: -40px;
-				left: 6px;
-				background: #000;
-				color: white;
-				padding: 8px;
-				z-index: 10000;
-				text-decoration: none;
-			}
-
-			.skip-link:focus {
-				top: 6px;
-			}
-
 			/* Service card enhancements */
 			.service-card {
 				transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,12 +101,20 @@
 				padding: 2rem;
 				border-radius: 10px;
 			}
+
+			/* WhatsApp button styling */
+			.whatsapp-button {
+				background-color: #25D366 !important;
+				border-color: #25D366 !important;
+			}
+
+			.whatsapp-button:hover {
+				background-color: #128C7E !important;
+				border-color: #128C7E !important;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
-
-		<!-- Skip to main content for accessibility -->
-		<a class="skip-link" href="#main-content">Skip to main content</a>
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -154,68 +156,129 @@
 								<section id="services-cards" aria-labelledby="services-heading">
 									<h4 id="services-heading" class="sr-only">Our Service Packages</h4>
 									<div class="row">
-										<!-- Web Design Card -->
+										<!-- Website Solutions Card -->
 										<div class="col-6 col-12-medium">
 											<div class="box service-card">
 												<span class="icon solid major fa-magic" aria-hidden="true"></span>
-												<h3>Web Design</h3>
+												<h3>Website Solutions</h3>
 												<p>We create beautiful, responsive websites that engage users and reflect your brand identity across all devices. Our designs combine aesthetics with functionality to deliver exceptional user experiences.</p>
-												<h4>Price: $250 - $450</h4>
-												<h5>What's Included:</h5>
-												<ul>
-													<li>Custom responsive design</li>
-													<li>User experience optimization</li>
-													<li>Brand integration</li>
-													<li>Mobile-first approach</li>
-													<li>Cross-browser compatibility</li>
-												</ul>
-												<ul>
-													<li><em>Price determined by type of business, purpose of website, and number of weekly support hours</em></li>
-												</ul>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Package</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Starter Site</td>
+													<td>Landing page / portfolio</td>
+													<td>$60.00</td>
+												</tr>
+												<tr>
+													<td>Business Essentials</td>
+													<td>3 pages (home, about, services)</td>
+													<td>$100.00
+													</td>
+												</tr>
+												<tr>
+													<td>Complete Business Site</td>
+													<td>5 pages (home, about, services, contact, portfolio)</td>
+													<td>$150.00</td>
+												</tr>
+												<tr>
+													<td>Education Platform</td>
+													<td>School website with multiple features</td>
+													<td>$180.00</td>
+												</tr>
+												<tr>
+													<td>Corporate Presence</td>
+													<td>Professional corporate website</td>
+													<td>$250.00</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="1"></td>
+													<td>Premium Hosting + Domain (per year)</td>
+													<td>$50.00</td>
+												</tr>
+												<tr>
+													<td colspan="1"></td>
+													<td>Basic Hosting + Domain (per year)</td>
+													<td>$25.00</td>
+												</tr>
+											</tfoot>
+										</table>
+											</div>
 												<ul class="actions">
-													<li><a href="contact_page.html" class="button primary" aria-label="Get started with web design service">Get Started</a></li>
+													<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I'm%20interested%20in%20your%20Website%20Solutions.%20Can%20you%20please%20provide%20more%20information%20about%20your%20website%20packages?" class="button primary whatsapp-button" aria-label="Contact us on WhatsApp for website solutions" target="_blank">Get Started on WhatsApp</a></li>
 												</ul>
 											</div>
 										</div>
 
-										<!-- SEO Optimization Card -->
+										<!-- Digital Marketing Card -->
 										<div class="col-6 col-12-medium">
 											<div class="box service-card">
 												<span class="icon solid major fa-chart-line" aria-hidden="true"></span>
-												<h3>SEO Optimization</h3>
+												<h3>Digital Marketing</h3>
 												<p>Increase visibility and organic traffic with our comprehensive search engine optimization strategies. We implement proven techniques to improve your search rankings and drive qualified traffic.</p>
 												<h4>Price: $50 - $100/month</h4>
 												<h5>What's Included:</h5>
 												<ul>
 													<li>Keyword research & strategy</li>
-													<li>Digital marketing</li>
+													<li>Digital marketing campaigns</li>
 													<li>Social media optimization</li>
 													<li>Local SEO</li>
 													<li>Performance reporting</li>
 												</ul>
 												<ul class="actions">
-													<li><a href="contact_page.html" class="button primary" aria-label="Get started with SEO optimization service">Get Started</a></li>
+													<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I'm%20interested%20in%20your%20Digital%20Marketing%20services.%20Can%20you%20please%20provide%20more%20information%20about%20your%20SEO%20and%20marketing%20packages?" class="button primary whatsapp-button" aria-label="Contact us on WhatsApp for digital marketing" target="_blank">Get Started on WhatsApp</a></li>
 												</ul>
 											</div>
 										</div>
 										
-										<!-- Brand Identity Card -->
+										<!-- Graphic Design Service Card -->
 										<div class="col-6 col-12-medium">
 											<div class="box service-card">
 												<span class="icon solid major fa-paint-brush" aria-hidden="true"></span>
-												<h3>Brand Identity</h3>
-												<p>Complete branding solutions including logos and business materials that establish a strong visual identity for your business. We create cohesive brand systems that resonate with your audience.</p>
-												<h4>Price: $70 - $200</h4>
-												<h5>What's Included:</h5>
-												<ul>
-													<li>Logo design & branding</li>
-													<li>Company profiles</li>
-													<li>Business cards</li>
-													<li>Brochures</li>
-													<li>Brand consistency across platforms</li>
-												</ul>
+												<h3>Graphic Design Service</h3>
+												<p>We craft powerful visual identities that make your brand unforgettable. Our comprehensive design service delivers essential assets to stand out in a crowded marketplace and connect with your target audience.</p>
+												<table class="alt">
+													<thead>
+														<tr>
+															<th>Product</th>
+															<th>Description</th>
+															<th>Price</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Professional Flyers</td>
+															<td>High-impact flyers (100 copies)</td>
+															<td>$10.00</td>
+														</tr>
+														<tr>
+															<td>Business Cards</td>
+															<td>Professional cards (100 copies)</td>
+															<td>$10.00
+															</td>
+														</tr>
+														<tr>
+															<td>Company Profile</td>
+															<td>Professional company booklet</td>
+															<td>$15.00</td>
+														</tr>
+														<tr>
+															<td>Promotional Banner</td>
+															<td>Custom banner (per square metre)</td>
+															<td>$15.00</td>
+														</tr>
+												</table>
 												<ul class="actions">
-													<li><a href="contact_page.html" class="button primary" aria-label="Get started with brand identity service">Get Started</a></li>
+													<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I'm%20interested%20in%20your%20Graphic%20Design%20services.%20Can%20you%20please%20provide%20more%20information%20about%20your%20branding%20and%20print%20services?" class="button primary whatsapp-button" aria-label="Contact us on WhatsApp for graphic design" target="_blank">Get Started on WhatsApp</a></li>
 												</ul>
 											</div>
 										</div>
@@ -225,7 +288,7 @@
 											<div class="box service-card">
 												<span class="icon solid major fa-cogs" aria-hidden="true"></span>
 												<h3>Custom Solutions</h3>
-												<p>Let's talk and create a tailor-made solution for you. We specialize in building custom digital solutions that perfectly fit your unique business requirements.</p>
+												<p>When your vision requires unique technology, our custom development service delivers. We partner with you to design, engineer, and deploy tailor-made solutions from the ground up.</p>
 												<h4>Custom Pricing</h4>
 												<h5>What's Included:</h5>
 												<ul>
@@ -236,7 +299,7 @@
 													<li>Technical support</li>
 												</ul>
 												<ul class="actions">
-													<li><a href="contact_page.html" class="button primary" aria-label="Discuss custom solution requirements">Let's Talk</a></li>
+													<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I'm%20interested%20in%20your%20Custom%20Solutions%20service.%20I%20have%20a%20specific%20project%20in%20mind%20and%20would%20like%20to%20discuss%20custom%20development%20options." class="button primary whatsapp-button" aria-label="Contact us on WhatsApp for custom solutions" target="_blank">Let's Talk on WhatsApp</a></li>
 												</ul>
 											</div>
 										</div>
@@ -258,26 +321,26 @@
 											<thead>
 												<tr>
 													<th scope="col">Service</th>
-													<th scope="col">Starter Package</th>
-													<th scope="col">Business Package</th>
+													<th scope="col">Startup Package</th>
+													<th scope="col">Growth Package</th>
 													<th scope="col">Enterprise Package</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<th scope="row"><strong>Web Design</strong></th>
-													<td>5-page responsive website</td>
-													<td>10-page custom design with animations</td>
-													<td>Unlimited pages with advanced interactions</td>
+													<th scope="row"><strong>Website Solutions</strong></th>
+													<td>Starter Site</td>
+													<td>Business Essentials</td>
+													<td>Complete Business Site</td>
 												</tr>
 												<tr>
-													<th scope="row"><strong>SEO Optimization</strong></th>
-													<td>Basic on-page SEO</td>
+													<th scope="row"><strong>Digital Marketing</strong></th>
+													<td>Basic SEO optimization</td>
 													<td>Comprehensive SEO with monthly reports</td>
 													<td>Full SEO strategy with ongoing optimization</td>
 												</tr>
 												<tr>
-													<th scope="row"><strong>Brand Identity</strong></th>
+													<th scope="row"><strong>Graphic Design</strong></th>
 													<td>Logo + basic branding</td>
 													<td>Full brand identity system</td>
 													<td>Complete brand strategy & collateral</td>
@@ -312,7 +375,7 @@
 									
 									<div class="box">
 										<h4>Custom Solutions</h4>
-										<p>Don't see exactly what you need? We offer fully customized solutions tailored to your specific requirements. <a href="contact_page.html">Contact us</a> for a personalized quote based on your project scope, timeline, and budget.</p>
+										<p>Don't see exactly what you need? We offer fully customized solutions tailored to your specific requirements. <a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I'm%20interested%20in%20a%20custom%20solution%20for%20my%20business.%20Can%20we%20discuss%20my%20specific%20requirements?" target="_blank">Contact us on WhatsApp</a> for a personalized quote based on your project scope, timeline, and budget.</p>
 									</div>
 								</section>
 
@@ -323,7 +386,7 @@
 									<p>Whether you need a single service or a complete digital solution, we're here to help bring your vision to life. Our team will work closely with you to understand your goals and deliver results that exceed your expectations.</p>
 
 									<ul class="actions">
-										<li><a href="contact_page.html" class="button primary" aria-label="Get a free quote for our services">Get a Free Quote</a></li>
+										<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I%20visited%20your%20website%20and%20would%20like%20to%20get%20a%20free%20quote%20for%20your%20services.%20Can%20you%20please%20assist%20me?" class="button primary whatsapp-button" aria-label="Get a free quote on WhatsApp" target="_blank">Get a Free Quote on WhatsApp</a></li>
 										<li><a href="portfolio.html" class="button" aria-label="View our portfolio of work">View Our Work</a></li>
 									</ul>
 								</section>
@@ -335,6 +398,7 @@
 				<!-- Footer -->
 					<footer id="footer" role="contentinfo">
 						<ul class="icons">
+							<li><a href="https://wa.me/263786811333?text=Hello%20Devstudio!%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20services." class="icon brands fa-whatsapp whatsapp-button" rel="noopener noreferrer" target="_blank" aria-label="Contact us on WhatsApp"><span class="label">WhatsApp</span></a></li>
 							<li><a href="https://www.facebook.com/profile.php?id=61579055335130" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank" aria-label="Visit our Facebook page"><span class="label">Facebook</span></a></li>
 							<li><a href="https://www.linkedin.com/in/blessed-mpofu-31b0b7379" class="icon brands fa-linkedin" rel="noopener noreferrer" target="_blank" aria-label="Visit our LinkedIn profile"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/dashboard" class="icon brands fa-github" rel="noopener noreferrer" target="_blank" aria-label="Visit our GitHub repository"><span class="label">GitHub</span></a></li>
